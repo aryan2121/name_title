@@ -1,0 +1,75 @@
+import java.util.*;
+
+
+ public class rev
+{
+  public static void main(String arg[])
+
+ {
+	Scanner obj=new Scanner(System.in);
+	System.out.println("enter th name");
+	String str=obj.nextLine();
+  	int l=str.length();
+	char ch,chn,frst;
+ 	String str1=" ";
+ 	String n=" ";
+	String str2= " ";
+	String blank= " ";
+	String st= " ";
+                  int cn=0,counter =0;	
+
+      for(int g=0;g<l;g++)
+{        ch=str.charAt(g);
+
+         if(ch==' ')
+{ counter++; }
+ 
+}
+
+
+
+      for(int i=0;i<l;i++)
+{
+        ch=str.charAt(i);
+
+           frst=str.charAt(0);
+         st=blank+frst;
+if(i==0)
+{
+      System.out.print(st);
+        System.out.print(".");
+  }
+
+if(ch==' '){ cn++;}
+
+
+
+
+       if(ch==' ')
+{              n=" ";     
+                            if(cn<counter){ 
+      
+      for(int m=i;m>0;m++)
+{  
+      m++;
+      chn=str.charAt(m);
+      str2=blank+chn;
+      break;
+}
+       st="  ";
+      System.out.print(str2);
+      System.out.print(".");        }
+}
+        else
+{
+        n=n+ch;
+
+}
+}
+
+        System.out.println(n);
+
+    
+  
+}
+}
